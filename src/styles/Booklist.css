@@ -1,0 +1,29 @@
+.booklist {
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 68vw;
+  border-right: 2px black solid;
+}
+
+/* .booklist div {
+  margin: 10px;
+  border-radius: 20px;
+  background-color: rgb(229, 245, 249);
+  border: 2px solid black;
+} */
+.booklist img {
+  /* margin: 10px; */
+  margin-bottom: 0px;
+  height: 300px;
+  width: 300px;
+  border-radius: 5px;
+}
+
+.booklist h3,
+p {
+  margin: 10px;
+  inline-size: 250px;
+}
