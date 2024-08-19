@@ -4,10 +4,12 @@ import Book from "./Book";
 
 const Booklist = () => {
   return (
-    <div className="booklist">
-      {books.map((book) => {
-        return <Book key={book.id} {...book} />;
-      })}
+    <div className="container">
+      <div className="booklist">
+        {books.map((book) => {
+          return <Book key={book.id} book={book} />;
+        })}
+      </div>
     </div>
   );
 };

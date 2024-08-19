@@ -4,8 +4,8 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 68vw;
-  border-right: 2px black solid;
+  /* width: 68vw;
+  border-right: 2px black solid; */
 }
 
 /* .booklist div {

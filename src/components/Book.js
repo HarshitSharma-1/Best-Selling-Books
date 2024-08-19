@@ -1,40 +1,31 @@
 import "../styles/Book.css";
+import { useContext } from "react";
+import { CartContext } from "./CartContext";
 
 const Book = (props) => {
-  const { img, title, author, rating } = props;
-
-  function buyNow() {
-    console.log(props.title);
-    alert("Book ordered");
-  }
-
-  function addToCart() {
-    console.log(props.title);
-    alert("Book will be added to cart when cart is available");
-  }
+  const { addToCart } = useContext(CartContext);
+  const { book } = props;
 
   return (
     <div className="book">
-      <div class="flip-card">
-        <div class="flip-card-inner">
+      <div className="flip-card">
+        <div className="flip-card-inner">
           <div className="flip-card-front">
-            <img src={img} alt="Name" />
+            <img src={book.img} alt="Name" />
           </div>
           <div className="flip-card-back">
-            <h3>{title}</h3>
-            <p>{author}</p>
-            <p>{rating}</p>
-            <p>{props.downloads}</p>
-            <p>{props.type}</p>
-            <h3>{props.price}</h3>
+            <h3>{book.title}</h3>
+            <p>{book.author}</p>
+            <p>{book.rating}</p>
+            <p>{book.downloads}</p>
+            <p>{book.type}</p>
+            <h3>{book.price}</h3>
           </div>
         </div>
       </div>
       <div className="buttonbox">
-        <button className="button1" onClick={buyNow}>
-          Buy Now
-        </button>
-        <button className="button" onClick={addToCart}>
+        <button className="button1">Buy Now</button>
+        <button className="button" onClick={() => addToCart(book)}>
           Add to cart
         </button>
       </div>
